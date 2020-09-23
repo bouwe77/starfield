@@ -16,9 +16,9 @@ var size = 0.2;
 var centerX = canvas.width / 2;
 var centerY = canvas.height / 2;
 
-var speed = 10;
+var speed = 20; // speeds between 1 and 20 look good, faster than that doesn't.
 
-const randomPlanetIndex = 48;
+const randomPlanetIndex = 123123; // disabled for now
 for (var i = 0; i < numStars; i++) {
   stars[i] = new Star(i === randomPlanetIndex ? 20 : size);
 }
