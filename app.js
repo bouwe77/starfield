@@ -1,5 +1,5 @@
 var canvas = document.getElementById("canvas");
-var c = canvas.getContext("2d");
+var context = canvas.getContext("2d");
 
 /*
 For fullscreen:
@@ -59,16 +59,16 @@ function Star(size) {
 
     s = size * (canvas.width / this.z);
 
-    c.beginPath();
-    c.fillStyle = "white";
-    c.arc(x, y, s, 0, Math.PI * 2);
-    c.fill();
+    context.beginPath();
+    context.fillStyle = "white";
+    context.arc(x, y, s, 0, Math.PI * 2);
+    context.fill();
   };
 }
 
 function draw() {
-  c.fillStyle = "black";
-  c.fillRect(0, 0, canvas.width, canvas.height);
+  context.fillStyle = "black";
+  context.fillRect(0, 0, canvas.width, canvas.height);
   for (var i = 0; i < numStars; i++) {
     stars[i].show();
     stars[i].move();
